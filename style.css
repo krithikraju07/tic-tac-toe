@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(to bottom,#42275a , #734b6d); /* Gradient color */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#gameboard {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 2px #090806; /* Vibrant border color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(244, 244, 244, 0.8); /* Semi-transparent blue background */
+    border: solid 2px #0b0a06;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Increase font size for better visibility */
+    font-weight: bold;
+    color: #f0ecec; /* Light text color */
+}
+
+.circle {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 15px solid rgba(13, 0, 2, 0.8); /* Semi-transparent pink border */
+    box-sizing: border-box;
+}
+
+.cross {
+    height: 90px;
+    width: 90px;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.cross:before,
+.cross:after {
+    content: "";
+    position: absolute;
+    background-color: #5a0450; /* Vibrant red color */
+}
+
+.cross:before {
+    left: 50%;
+    width: 30%;
+    margin-left: -15%;
+    height: 100%;
+}
+
+.cross:after {
+    top: 50%;
+    height: 30%;
+    margin-top: -15%;
+    width: 100%;
+}
+
+#info {
+    margin-top: 20px;
+    font-size: 28px;
+    color: #faf3f3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#resetButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #080107;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#resetButton:hover {
+    background-color: #370331;
+}
